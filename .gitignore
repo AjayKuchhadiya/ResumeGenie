@@ -1,13 +1,27 @@
 # Python bytecode
-__pycache__
+__pycache__/
 *.py[cod]
 
 # Virtual environment
 venv/
 
-# environment variables
-.env 
+# Environment variables
+.env
 
 # Logs and temporary files
 *.log
 *.tmp
+
+# Frontend build files
+/frontend/build/
+/frontend/node_modules/
+
+# IDE specific files (if you're using any)
+*.sublime-project
+*.sublime-workspace
+*.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db

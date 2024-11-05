@@ -1,4 +1,3 @@
-# services/ocr_service.py
 import fitz  # PyMuPDF
 import pytesseract
 from PIL import Image

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
-from services import ocr
+from services import ocr, llm  # Import the LLM service
 
 router = APIRouter(prefix='/upload', tags=["Upload"])
 
@@ -11,4 +11,8 @@ async def upload_file(file: UploadFile = File(...)):
 
     # Process the file and extract text
     extracted_text = await ocr.extract_text(file)
-    return {"extracted_text": extracted_text}
+
+    # Extract structured information using LLM
+    structured_data = llm.extract_entities(extracted_text)
+
+    return {"extracted_text": extracted_text, "structured_data": structured_data}

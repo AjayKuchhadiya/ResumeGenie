@@ -62,7 +62,8 @@ Please identify and extract the following specific entities accurately:
   1. Ensure that the output strictly adheres to the provided format as a valid Python dictionary.
   2. Avoid including any explanations or commentary in the output.
   3. Double-check that all instructions are followed closely.
-  4. Please make sure that the output only contains a valid python dictionary. 
+  4. Please do not make anything up. If the entities are not identitfied in the text, then label that entitiy with NA.
+  5. Please make sure that the output only contains a valid python dictionary. 
 
 
   ####
@@ -83,8 +84,7 @@ def extract_entities(cv_text):
   response = chain.invoke({"cv_text": cv_text})
 #   print(response['text'])
   entities = json.loads(extract_braces_content(response['text']))
-  print(entities)
-  print(type(entities))
+  print('\n\n\n', entities, '\n\n\n')
   return entities
 
 # s = time.time()

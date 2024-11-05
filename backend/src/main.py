@@ -1,13 +1,21 @@
-# main.py
 from fastapi import FastAPI
-from routers import upload, extract
+from fastapi.middleware.cors import CORSMiddleware
+from routers import upload
 import uvicorn
 
 app = FastAPI()
 
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # Allow only the frontend origin
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allow all headers
+)
+
 # Include the routers
 app.include_router(upload.router)
-app.include_router(extract.router)
 
 # Root endpoint (optional)
 @app.get("/")

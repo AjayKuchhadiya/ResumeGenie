@@ -1,4 +1,3 @@
-# routers/extract_router.py
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from services import llm
