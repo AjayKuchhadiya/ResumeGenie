@@ -55,8 +55,11 @@ Resume Genie is a web application designed to extract and process resume informa
    ```bash
    pip install -r requirements.txt
    ```
-
-4. **Run the FastAPI server:**
+4. **Create a `.env` file and add your API key:**
+   ```bash
+   GROQ_API_KEY="YOUR_GROQ_API_KEY"
+   ```   
+5. **Run the FastAPI server:**
    ```bash
    cd src
    python main.py
