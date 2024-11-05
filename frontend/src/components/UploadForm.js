@@ -1,23 +1,31 @@
 import React, { useState } from 'react';
+import { Button, Form } from 'react-bootstrap';
 
-function UploadForm({ onUpload }) {
+const UploadForm = ({ onUpload }) => {
   const [file, setFile] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (file) onUpload(file);
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (file) {
+      onUpload(file);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="file"
-        accept=".pdf,.docx"
-        onChange={(e) => setFile(e.target.files[0])}
-      />
-      <button type="submit" disabled={!file}>Upload Resume</button>
-    </form>
+    <Form onSubmit={handleSubmit}>
+      <Form.Group controlId="formFile" className="mb-3">
+        <Form.Label>Select Resume (PDF or DOCX)</Form.Label>
+        <Form.Control type="file" accept=".pdf,.docx" onChange={handleFileChange} />
+      </Form.Group>
+      <Button variant="primary" type="submit" disabled={!file} block>
+        Upload Resume
+      </Button>
+    </Form>
   );
-}
+};
 
 export default UploadForm;

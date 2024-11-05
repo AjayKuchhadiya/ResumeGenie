@@ -15,4 +15,4 @@ async def upload_file(file: UploadFile = File(...)):
     # Extract structured information using LLM
     structured_data = llm.extract_entities(extracted_text)
 
-    return {"extracted_text": extracted_text, "structured_data": structured_data}
+    return structured_data
