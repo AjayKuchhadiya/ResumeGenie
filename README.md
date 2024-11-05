@@ -102,39 +102,7 @@ file: [your resume file]
 ```
 
 ### Example Response
-```json
-{
-    "First Name": "AJAY",
-    "Last Name": "KUCHHADIYA",
-    "Email Address": "kuchhadiyaajay86kn@gmail.com",
-    "Phone Number": "+91-7457878864",
-    "Education History": "B.Tech, Computer Science, 7.07 CGPA, 2020 - 2024, Hindustan College of Science and Technology, Farah, Uttar Pradesh",
-    "Experience Summary": "Trainee Associate Software Engineer at Walking Tree Technologies, Data Science Intern at Foxmula, and worked on personal projects CrewAI Health Advisor and FashionAI: An AI-based Fashion Platform",
-    "Skills": [
-        "Python",
-        "C/C++",
-        "Scikit-learn",
-        "TensorFlow",
-        "Pandas",
-        "SQL",
-        "NoSQL",
-        "Matplotlib",
-        "Seaborn",
-        "LLM",
-        "RAG",
-        "Autogen",
-        "Vector Store",
-        "Hugging Face",
-        "Flask",
-        "FastAPI",
-        "RestfulAPI",
-        "PostgreSQL",
-        "MongoDB"
-    ],
-    "Current Position": "Trainee Associate Software Engineer",
-    "Years of Experience": 0.5
-}
-```
+![UI Screenshot](https://github.com/AjayKuchhadiya/ResumeGenie/blob/main/frontend/public/applicationSS.png)
 
 ## Usage
 
